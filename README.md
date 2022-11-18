@@ -24,14 +24,16 @@ git clone git@github.com:flucoma/flucoma-sc.git
 cd flucoma-sc && mkdir -p build && cd build
 cmake -DSC_PATH=</path/to/supercollider-src> -DCMAKE_CXX_COMPILER=distcc-clang++ -DCMAKE_C_COMPILER=distcc-clang -DCMAKE_CXX_FLAGS='-mfpu=neon -mfloat-abi=hard' -DCMAKE_C_FLAGS='-mfpu=neon -mfloat-abi=hard' -DFLUID_BRANCH=<branchname> ..
 make install
+cp -r /path/to/flucoma-sc/release-packaging/FluidCorpusManipulation /usr/share/SuperCollider/Extensions/FluidCorpusManipulation
 ```
 
 <!-- - Commented out the Transient objects, removed the include of ConvolutionTools in SineExtraction. -->
 
 ## Install
-
+- Download release (GH pages coming eventually) https://www.dropbox.com/s/69cws5sd30ji5bu/FluidCorpusManipulationBela20220721.zip
+- Copy to Bela:
 ```sh
-cp -r /path/to/flucoma-sc/release-packaging/FluidCorpusManipulation /usr/share/SuperCollider/Extensions/FluidCorpusManipulation
+scp -r /path/to/FluidCorpusManipulation root@bela.local:/usr/share/SuperCollider/Extensions/FluidCorpusManipulation
 ```
 
 ## Usage
