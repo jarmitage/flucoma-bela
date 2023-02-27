@@ -15,6 +15,7 @@ This method assumes building on Bela and cross-compiling via `distcc` (locally v
 - Bela will need Internet access: https://learn.bela.io/using-bela/bela-techniques/connecting-to-wifi/
 - `distcc` setup on Bela: https://gist.github.com/jarmitage/2a5dffbcfdd5532371f097e9bb80e4b0
   - Make sure to see comment thread for how to use `distcc` at the same time as sharing network over USB
+- When doing `cmake` you may observe the process getting stuck in a loop at the `-- Getting container node sizes` step. This should end if you wait long enough. Not sure what the problem is.
 
 # SuperCollider
 ---
@@ -80,6 +81,7 @@ scp -r /FluidCorpusManipulation root@bela.local:/usr/share/
 - See examples in `/cpp`
 
 ## Build
+If you need to save space on Bela, download `eigen` and `HISSTools_Library` dependencies as zip instead of git cloning, and copy these to Bela (`scp -r eigen root@bela.local:eigen` etc) and add to the `cmake` command below `-DEIGEN_PATH=../../eigen -DHISS_PATH=../../HISSTools_library`.
 ```sh
 git clone https://github.com/flucoma/flucoma-core
 cd flucoma-core && mkdir -p build && cd build
