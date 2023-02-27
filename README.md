@@ -1,6 +1,8 @@
 # Flucoma x Bela
 ---
 
+Warning: built and tested with experimental Bela image [v0.5.0alpha2](https://github.com/BelaPlatform/bela-image-builder/releases/tag/v0.5.0alpha2), may not work on older builds.
+
 ## Links
 - https://flucoma.org
 - https://discourse.flucoma.org/t/guidance-building-for-bela-platform/876/1
