@@ -53,8 +53,9 @@ scp -r /path/to/FluidCorpusManipulation root@bela.local:Bela/projects/pd-externa
 ```
 
 ## Usage
+- Every patch must include `[declare -lib fluid_libmanipulation]`
 - Bela Pure Data reference: https://learn.bela.io/using-bela/languages/pure-data/
-- See examples in `/pd`
+- See examples in `/pd` (TBC)
 
 ## Build
 ```sh
@@ -78,7 +79,7 @@ scp -r /FluidCorpusManipulation root@bela.local:/usr/share/
 
 ## Usage
 - Bela C++ reference: https://learn.bela.io/using-bela/languages/c-plus-plus/
-- See examples in `/cpp`
+- See examples in `/cpp` (TBC)
 
 ## Build
 If you need to save space on Bela, download `eigen` and `HISSTools_Library` dependencies as zip instead of git cloning, and copy these to Bela (`scp -r eigen root@bela.local:eigen` etc) and add to the `cmake` command below `-DEIGEN_PATH=../../eigen -DHISS_PATH=../../HISSTools_library`.
