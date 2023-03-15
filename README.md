@@ -47,10 +47,11 @@ cp -r ../install/FluidCorpusManipulation /usr/share/SuperCollider/Extensions/Flu
 
 ## Install
 - Download from Releases page
-- Copy to Bela:
-```sh
-scp -r /path/to/FluidCorpusManipulation root@bela.local:Bela/projects/pd-externals/FluidCorpusManipulation
-```
+- Unzip to find the externals
+- Create a `pd-externals` folder if you haven't already, see https://learn.bela.io/using-bela/languages/pure-data/#abstractions
+- Copy the Flucoma externals to Bela:
+  - Via the Bela IDE: open the `pd-externals` "project" and drag-and-drop the externals onto the browser window.
+  - Via `scp`: `scp -r /path/to/FluidCorpusManipulation root@bela.local:Bela/projects/pd-externals/FluidCorpusManipulation`.
 
 ## Usage
 - Every patch must include `[declare -lib fluid_libmanipulation]`
