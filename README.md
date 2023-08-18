@@ -51,7 +51,7 @@ cp -r ../install/FluidCorpusManipulation /usr/share/SuperCollider/Extensions/Flu
 - Create a `pd-externals` folder if you haven't already, see https://learn.bela.io/using-bela/languages/pure-data/#abstractions
 - Copy the Flucoma externals to Bela (not the entire outer folder itself):
   - Via the Bela IDE: open the `pd-externals` "project" and drag-and-drop the contents of the folder onto the browser window.
-  - Via `scp`: `scp -r /path/to/FluidCorpusManipulation/* root@bela.local:Bela/projects/pd-externals/FluidCorpusManipulation`.
+  - Via `scp`: `scp -r /path/to/FluidCorpusManipulation/* root@bela.local:Bela/projects/pd-externals/`.
 
 ## Usage
 - Every patch must include `[declare -lib fluid_libmanipulation]`
@@ -65,7 +65,7 @@ git clone https://github.com/flucoma/flucoma-pd
 cd flucoma-pd && mkdir -p build && cd build
 cmake -DPD_PATH=../../pure-data -DCMAKE_CXX_COMPILER=distcc-clang++ -DCMAKE_C_COMPILER=distcc-clang -DCMAKE_CXX_FLAGS='-mfpu=neon -mfloat-abi=hard' -DCMAKE_C_FLAGS='-mfpu=neon -mfloat-abi=hard' -DDOCS=OFF ..
 make install
-cp -r ../install/FluidCorpusManipulation /Bela/projects/pd-externals/FluidCorpusManipulation
+cp -r ../install/FluidCorpusManipulation/* /Bela/projects/pd-externals/
 ```
 
 # C++
